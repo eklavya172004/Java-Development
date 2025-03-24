@@ -5,14 +5,15 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="dev" class="org.example.Dev">
-<!--        so xml file contains only two objects - beans as i am  -->
-            <property name="age" value="12" />
+    <bean id="dev" class="org.example.Dev" autowire="byType">
+        <property name="com" ref="desk1" />
     </bean>
 
+    <bean id="desk1" class="org.example.Desktop" primary="true">
 
+    </bean>
 
-    <bean id="dev2" class="org.example.Laptop">
+    <bean id="lap1" class="org.example.Laptop">
         <!--        so xml file contains only two objects - beans as i am  -->
     </bean>
 </beans>

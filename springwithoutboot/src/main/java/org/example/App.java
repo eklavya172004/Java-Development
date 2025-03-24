@@ -17,6 +17,7 @@ public class App
 
         Dev obj = (Dev) context.getBean("dev");
 //        obj.build();
-        System.out.println(obj.getAge());
+//        System.out.println(obj.compile());
+//        obj.compile();
     }
 }
